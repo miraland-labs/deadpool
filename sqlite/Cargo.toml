@@ -1,14 +1,18 @@
 [package]
-name = "deadpool-sqlite"
-version = "0.8.1"
+name = "miraland-deadpool-sqlite"
+version = "0.8.2"
 edition = "2021"
 rust-version = "1.77"
 authors = ["Michael P. Jung <michael.jung@terreon.de>"]
-description = "Dead simple async pool for rusqlite"
+description = "Miraland patch for unreleased original rev. e6de358 and after, which was requird as deps and should exists on crates.io. Dead simple async pool for rusqlite"
 keywords = ["async", "database", "pool", "sqlite"]
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/bikeshedder/deadpool"
 readme = "README.md"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "deadpool_sqlite"
 
 [package.metadata.docs.rs]
 all-features = true

@@ -1,8 +1,8 @@
 [package]
 name = "miraland-deadpool-sqlite"
-version = "0.8.2"
+version = "0.8.3"
 edition = "2021"
-rust-version = "1.77"
+rust-version = "1.76"
 authors = ["Michael P. Jung <michael.jung@terreon.de>"]
 description = "Miraland patch for deadpool unreleased rev. e6de358 and after which have not been published to crates.io, requird as deps and should exist on crates.io. Dead simple async pool for rusqlite"
 keywords = ["async", "database", "pool", "sqlite"]
@@ -30,7 +30,9 @@ deadpool = { path = "../", version = "0.12.0", default-features = false, feature
     "managed",
 ] }
 deadpool-sync = { path = "../sync", version = "0.1.1" }
-rusqlite = "0.32.1"
+# rusqlite = "0.32.1"
+# try to cope with meteora
+rusqlite = "0.31.0"
 serde = { package = "serde", version = "1.0", features = [
     "derive",
 ], optional = true }
